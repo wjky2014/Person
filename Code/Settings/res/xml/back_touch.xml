@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/back_touch">
+	<PreferenceCategory
+		android:title="@string/settingfinger"
+		android:key="finger_print">
+	</PreferenceCategory>	
+		
+	<PreferenceCategory
+		android:title="@string/click">
+		<SwitchPreference 
+		android:key="take_photo"
+		android:summary="@string/take_photo_summary"
+		android:title="@string/take_photo_title" />	
+	</PreferenceCategory>		
+	<PreferenceCategory
+		android:title="@string/double_click">
+		<SwitchPreference 
+        android:key="open_torch"
+        android:summary="@string/open_torch_summary"
+        android:title="@string/open_torch_title" />		
+	</PreferenceCategory>	
+	<PreferenceCategory
+		android:title="@string/long_click"
+		android:key="long_click">
+		<SwitchPreference 
+        android:key="switch_camera"
+        android:summary="@string/switch_camera_summary"
+        android:title="@string/switch_camera_title" />
+		<SwitchPreference 
+        android:key="qucikly_open_camera"
+        android:summary="@string/qucikly_open_camera_summary"
+        android:title="@string/qucikly_open_camera_title" />
+		<SwitchPreference 
+        android:key="show_locked"
+        android:summary="@string/show_locked_summary"
+        android:title="@string/show_locked_title" />
+		<SwitchPreference 
+        android:key="answer_call"
+        android:summary="@string/answer_call_summary"
+        android:title="@string/answer_call_title" />
+		<SwitchPreference 
+        android:key="stop_almrm"
+        android:summary="@string/stop_almrm_summary"
+        android:title="@string/stop_almrma_title" />
+	</PreferenceCategory>	
+</PreferenceScreen>

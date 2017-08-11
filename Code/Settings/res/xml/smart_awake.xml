@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="smart_awake"
+    android:title="@string/smart_awake" >
+
+    <SwitchPreference 
+        android:key="double_click"
+        android:summary="@string/double_click_summary"
+        android:title="@string/double_click_title" />
+    <SwitchPreference
+        android:key="smart_music"
+        android:summary="@string/smart_music_summary"
+        android:title="@string/smart_music_tile" />
+    <Preference
+        android:key="gesture_left"
+        android:summary="@string/gesture_left"
+        android:title="@string/gesture_left" />
+    <Preference
+        android:key="gesture_right"
+        android:summary="@string/gesture_right"
+        android:title="@string/gesture_right" />
+    <Preference
+        android:key="gesture_up"
+        android:summary="@string/gesture_up"
+        android:title="@string/gesture_up" />
+    <Preference
+        android:key="gesture_down"
+        android:summary="@string/gesture_down"
+        android:title="@string/gesture_down" />
+    <Preference
+        android:key="gesture_c"
+        android:summary="@string/gesture_c"
+        android:title="@string/gesture_c" />
+    <Preference
+        android:key="gesture_o"
+        android:summary="@string/gesture_o"
+        android:title="@string/gesture_o" />
+    <Preference
+        android:key="gesture_w"
+        android:summary="@string/gesture_w"
+        android:title="@string/gesture_w" />
+    <Preference
+        android:key="gesture_e"
+        android:summary="@string/gesture_e"
+        android:title="@string/gesture_e" />
+    <Preference
+        android:key="gesture_v"
+        android:summary="@string/gesture_v"
+        android:title="@string/gesture_v" />
+    <Preference
+        android:key="gesture_m"
+        android:summary="@string/gesture_m"
+        android:title="@string/gesture_m" />
+    <Preference
+        android:key="gesture_s"
+        android:summary="@string/gesture_s"
+        android:title="@string/gesture_s" />
+    <Preference
+        android:key="gesture_z"
+        android:summary="@string/gesture_z"
+        android:title="@string/gesture_z" />
+
+</PreferenceScreen>

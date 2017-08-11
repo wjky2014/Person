@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="smart_features"
+    android:title="@string/smart_features" >
+
+    <Preference
+        android:key="smart_awake"
+        android:fragment="com.android.settings.smartawake.SmartawakeSettings"
+        android:title="@string/smart_awake" 
+        android:summary="@string/smart_awake_summary"/>
+    <SwitchPreference
+            android:key="double_launch_camera"
+            android:title="@string/double_launch_camera_title"
+            android:summary="@string/double_launch_camera_summary"
+            android:persistent="false" />
+	<!-- added by tangbaowen for multi pointer screen shot -->
+    <SwitchPreference
+        android:key="multi_pointer_take_screen_shot"
+        android:title="@string/multi_pointer_take_screen_shot_title"
+        android:summary="@string/multi_pointer_take_screen_shot_summary"
+        android:persistent="true"/>
+	<SwitchPreference
+        android:key="activit_shot"
+		android:title="@string/smart_activeshot"
+        android:summary="@string/smart_activeshot_summary"
+        android:persistent="false"	/>
+	<PreferenceScreen
+		android:fragment="com.android.settings.accessibility.ToggleAssistantFragment"
+		android:key="assistant_preference_screen"
+		android:title="@string/assistant_title"	
+	/>
+</PreferenceScreen>
