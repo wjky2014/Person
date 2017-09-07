@@ -8,8 +8,6 @@ import com.sprocomm.processmanager.utils.ProcessManagerUtils;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
-import android.widget.Toast;
 
 public class KillProcessReceiver extends BroadcastReceiver {
 

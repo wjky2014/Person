@@ -34,18 +34,25 @@ public class ProcessManagerUtils {
 	public static String SPECIAL_HIKE = "com.bsb.hike";
 	public static String SPECIAL_FACEBOOK_MANAGER = "com.facebook.orca";
 	public static String SPECIAL_FACEBOOK = "com.facebook.katana";
+	public static String SPECIAL_FACEBOOK_KATANA = "com.facebook.katana.stub";
+	public static String SPECIAL_FACEBOOK_SERVICE = "com.facebook.services";
+	public static String SPECIAL_FACEBOOK_APPMANAGER = "com.facebook.appmanager";
+	public static String SPECIAL_FACEBOOK_SYSTEM = "com.facebook.system";
 	public static String SPECIAL_VIBER = "com.viber.voip";
 	public static String SPECIAL_BBM = "com.bbm";
 	public static String SPECIAL_APPLOCK_DO = "com.domobile.applock";
 	public static String SPECIAL_APPLOCK_FO = "com.fotoable.applock";
 	public static String SPECIAL_GOOGLE_PLAY_SERVICE = "com.google.android.gms";
 	public static String SPECIAL_LINE = "jp.naver.line.android";
+	public static String SPECIAL_CTS_VERIFIER = "com.android.cts.verifier";
 	public static String[] apps = { SPECIAL_WECHAT, SPECIAL_QQ,
 			SPECIAL_WHATSPP, SPECIAL_SKYPE, SPECIAL_TWITTER, SPECIAL_IMO,
 			SPECIAL_GOOGLE_MAPS, SPECIAL_GOOGLE_PLUS, SPECIAL_HIKE,
 			SPECIAL_FACEBOOK_MANAGER, SPECIAL_FACEBOOK, SPECIAL_VIBER,
 			SPECIAL_BBM, SPECIAL_APPLOCK_DO, SPECIAL_APPLOCK_FO,
-			SPECIAL_GOOGLE_PLAY_SERVICE, SPECIAL_LINE };
+			SPECIAL_GOOGLE_PLAY_SERVICE, SPECIAL_LINE, SPECIAL_FACEBOOK_KATANA,
+			SPECIAL_FACEBOOK_SERVICE, SPECIAL_FACEBOOK_APPMANAGER,
+			SPECIAL_FACEBOOK_SYSTEM ,SPECIAL_CTS_VERIFIER};
 
 	// forceStopPackage
 	public static void ForceStopPacakge(Context context, String packagename) {

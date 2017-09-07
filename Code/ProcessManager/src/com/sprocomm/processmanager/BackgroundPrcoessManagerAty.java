@@ -17,11 +17,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
@@ -32,7 +29,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
 
 public class BackgroundPrcoessManagerAty extends Activity {
 
@@ -67,9 +63,7 @@ public class BackgroundPrcoessManagerAty extends Activity {
 
 		InitUI();
 		InitData();
-		ReceiverScreenOnOff();
-		ActionBar actionBar=getActionBar();
-		actionBar.setDisplayShowHomeEnabled(false);
+	
 	}
 
 	private void InitUI() {
@@ -333,42 +327,5 @@ public class BackgroundPrcoessManagerAty extends Activity {
 		}.start();
 	}
 
-	public void ReceiverScreenOnOff() {
-		IntentFilter screenOffFilter = new IntentFilter();
-		screenOffFilter.addAction(Intent.ACTION_SCREEN_OFF);
-		screenOffFilter.addAction(Intent.ACTION_SCREEN_ON);
-		BroadcastReceiver mScreenOnOffReceiver = new BroadcastReceiver() {
-
-			long screenOnTime, sceenOffTime;
-			long killProcessTime = ProcessManagerUtils.SCREEN_OFF_KILL_PROCESS_TIME;
-
-			@Override
-			public void onReceive(Context context, Intent intent) {
-				// TODO Auto-generated method stub
-				String action = intent.getAction();
-				Intent mAlarmintent = new Intent(
-						ProcessManagerUtils.KILL_PROCESS_ACTION);
-				AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-				PendingIntent alarmPendingItent = PendingIntent.getBroadcast(
-						context, 0, mAlarmintent, 0);
-
-				if (action.equals(Intent.ACTION_SCREEN_OFF)) {
-
-					sceenOffTime = System.currentTimeMillis();
-					alarmManager.set(AlarmManager.RTC_WAKEUP, sceenOffTime
-							+ killProcessTime, alarmPendingItent);
-				}
-				if (action.equals(Intent.ACTION_SCREEN_ON)) {
-					screenOnTime = System.currentTimeMillis();
-					if (screenOnTime - sceenOffTime <= killProcessTime) {
-						alarmManager.cancel(alarmPendingItent);
-					}
-				}
-
-			}
-
-		};
-		registerReceiver(mScreenOnOffReceiver, screenOffFilter);
-
-	}
+	
 }

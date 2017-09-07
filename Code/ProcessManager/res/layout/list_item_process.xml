@@ -26,7 +26,6 @@
             android:id="@+id/tv_process_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="包名"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -35,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="4dp"
-            android:text="允许/不允许在后台运行"
             android:textColor="@color/grey"
             android:textSize="14sp" />
     </LinearLayout>

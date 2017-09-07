@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sprocomm.processmanager"
+    android:sharedUserId="android.uid.system"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="13"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -19,7 +20,7 @@
         android:persistent="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         <activity
             android:name=".BackgroundPrcoessManagerAty"
             android:label="@string/app_name"
@@ -30,8 +31,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AutoStartManageAty"/>
-        
+       <service android:name="com.sprocomm.processmanager.BackgroundProcessManangService"/>
         <receiver android:name="com.sprocomm.processmanager.receiver.KillProcessReceiver" >
             <intent-filter>
                 <action android:name="KILL_PROCESS_RECEIVER" />
@@ -44,6 +44,12 @@
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
 
                 <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver  android:name="com.sprocomm.processmanager.receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
     </application>
