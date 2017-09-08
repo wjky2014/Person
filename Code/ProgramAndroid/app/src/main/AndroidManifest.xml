@@ -15,11 +15,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".component.ActivityMethods" />
-        <activity android:name=".component.OtherActivity" />
+        <activity android:name=".component.Activity.ActivityMethods" />
+        <activity android:name=".component.Activity.OtherActivity" />
+        <activity android:name=".component.Service.ServiceMethods" />
 
         <service
-            android:name=".component.ServiceMethods"
+            android:name=".component.Service.BindServiceMethods"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".component.Service.StartServiceMethods"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".component.Service.MyStartForcegroundService"
             android:enabled="true"
             android:exported="true"></service>
     </application>

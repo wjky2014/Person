@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.program.programandroid.component.ActivityMethods;
+import com.android.program.programandroid.component.Service.ServiceMethods;
 
 /**
  * Created by wangjie on 2017/9/7.
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mListView;
     private static final int MACTIVITY = 0;
+    private static final int MSERVICE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (position){
                     case MACTIVITY:
                         startActivity(new Intent(MainActivity.this, ActivityMethods.class));
+                        break;
+
+                    case MSERVICE:
+                        startActivity(new Intent(MainActivity.this, ServiceMethods.class));
                         break;
                     default:
                         break;
