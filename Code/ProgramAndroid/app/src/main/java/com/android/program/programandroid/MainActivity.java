@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.program.programandroid.component.ActivityMethods;
+import com.android.program.programandroid.component.BroadcastReceiver.BroadcastMethods;
 import com.android.program.programandroid.component.Service.ServiceMethods;
 
 /**
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView mListView;
     private static final int MACTIVITY = 0;
     private static final int MSERVICE = 1;
+    private static final int MBROADCASTRECEIVER = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
                     case MSERVICE:
                         startActivity(new Intent(MainActivity.this, ServiceMethods.class));
+                        break;
+                    case MBROADCASTRECEIVER:
+                        startActivity(new Intent(MainActivity.this, BroadcastMethods.class));
                         break;
                     default:
                         break;
