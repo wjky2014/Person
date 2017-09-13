@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:oneshot="false" > 
- 
-    <item android:drawable="@drawable/two_points_down01" android:duration="400"/> 
-    <item android:drawable="@drawable/two_points_down02" android:duration="400"/>
-    <item android:drawable="@drawable/two_points_down03" android:duration="400"/>
- </animation-list> 
