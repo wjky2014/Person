@@ -3,16 +3,17 @@
     package="com.programandroid"
     android:versionCode="1"
     android:versionName="1.0" >
-
+    <!-- 自定义 有序广播的权限 -->
     <permission android:name="android.permission.ORDERBROADCAST" />
-
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ORDERBROADCAST" />
+    <!-- 读取联系人的权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
- <!-- 接受短信的权限 -->
+    <!-- 读取，写入短信的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
     <application
@@ -36,6 +37,8 @@
         <activity android:name=".ContentProvider.ContentProviderMethods" />
         <activity android:name=".ContentProvider.ContactListActivity" />
         <activity android:name=".ContentProvider.MmsListActivity" />
+        <activity android:name=".Layout.LayoutMethods"/>
+        
         
         <service
             android:name=".Service.BindServiceMethod"

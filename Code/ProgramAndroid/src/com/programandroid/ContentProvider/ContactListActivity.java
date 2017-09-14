@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.programandroid.R;
 
-
 import android.app.Activity;
 import android.app.Application;
 import android.content.ContentResolver;
@@ -39,8 +38,10 @@ public class ContactListActivity extends Activity {
 			MyAdapter myAdapter = new MyAdapter();
 
 			TextView emptyView = new TextView(getApplicationContext());
-			emptyView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-			emptyView.setText(getResources().getString(R.string.please_add_contanct));
+			emptyView.setLayoutParams(new LayoutParams(
+					LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			emptyView.setText(getResources().getString(
+					R.string.please_add_contanct));
 			emptyView.setVisibility(View.GONE);
 			emptyView.setTextColor(Color.BLACK);
 			emptyView.setTextSize(20);
@@ -70,15 +71,18 @@ public class ContactListActivity extends Activity {
 				// 1,获取内容解析器(访问地址(后门))
 				ContentResolver contentResolver = getContentResolver();
 				// 2,对数据库指定表进行查询操作
-				Cursor cursor = contentResolver.query(Uri.parse("content://com.android.contacts/raw_contacts"),
+				Cursor cursor = contentResolver.query(Uri
+						.parse("content://com.android.contacts/raw_contacts"),
 						new String[] { "contact_id" }, null, null, null);
 				// 3,判断游标中是否有数据,有数据一直度
 				while (cursor.moveToNext()) {
 					String id = cursor.getString(0);
 					Log.i(tag, "id = " + id);// 1,2,3
 					// 4,通过此id去关联data表和mimetype表生成视图,data1(数据),mimetype(数据类型)
-					Cursor indexCursor = contentResolver.query(Uri.parse("content://com.android.contacts/data"),
-							new String[] { "data1", "mimetype" }, "raw_contact_id = ?", new String[] { id }, null);
+					Cursor indexCursor = contentResolver.query(
+							Uri.parse("content://com.android.contacts/data"),
+							new String[] { "data1", "mimetype" },
+							"raw_contact_id = ?", new String[] { id }, null);
 					HashMap<String, String> hashMap = new HashMap<String, String>();
 					// 5,游标向下移动获取数据过程
 					while (indexCursor.moveToNext()) {
@@ -110,7 +114,8 @@ public class ContactListActivity extends Activity {
 		lv_contact_list = (ListView) findViewById(R.id.lv_contact_list);
 		lv_contact_list.setOnItemClickListener(new OnItemClickListener() {
 			@Override
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
 				// 1,position点中条目的索引值,集合的索引值
 				String phone = mContactList.get(position).get("phone");
 				// 2,将此电话号码传递给前一个界面
@@ -146,10 +151,13 @@ public class ContactListActivity extends Activity {
 			if (convertView == null) {
 				holder = new Holder();
 				// 1,生成当前listview一个条目相应的view对象
-				convertView = View.inflate(getApplicationContext(), R.layout.list_item_contact, null);
+				convertView = View.inflate(getApplicationContext(),
+						R.layout.list_item_contact, null);
 				// 2,找到view中的控件
-				holder.tv_name = (TextView) convertView.findViewById(R.id.tv_name);
-				holder.tv_phone = (TextView) convertView.findViewById(R.id.tv_phone);
+				holder.tv_name = (TextView) convertView
+						.findViewById(R.id.tv_name);
+				holder.tv_phone = (TextView) convertView
+						.findViewById(R.id.tv_phone);
 				convertView.setTag(holder);
 
 			} else {

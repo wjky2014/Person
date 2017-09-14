@@ -6,11 +6,8 @@
         <item>Service</item>
         <item>BroadcastReceiver</item>
         <item>ContentProvider</item>
+        <item>Layout</item>
         <item>Intent</item>
-        <item>LinearLayout</item>
-        <item>RelativeLayout</item>
-        <item>FrameLayout</item>
-        <item>TableLayout</item>
         <item>TextView</item>
         <item>Button</item>
         <item>ImageView</item>
@@ -42,6 +39,5 @@
         <item>File</item>
         <item>SQLite</item>
     </string-array>
-
 
 </resources>

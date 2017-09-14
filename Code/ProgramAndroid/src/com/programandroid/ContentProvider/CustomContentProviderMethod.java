@@ -43,7 +43,7 @@ public class CustomContentProviderMethod extends ContentProvider {
 	@Override
 	public boolean onCreate() {
 		DBHelper helper = new DBHelper(getContext());
-		// 创建数据库 
+		// 创建数据库
 		db = helper.getWritableDatabase();
 		return true;
 

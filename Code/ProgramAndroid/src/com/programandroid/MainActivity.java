@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.programandroid.Activity.ActivityMethods;
 import com.programandroid.BroadcastReceiver.BroadcastMethods;
 import com.programandroid.ContentProvider.ContentProviderMethods;
+import com.programandroid.Layout.LayoutMethods;
 import com.programandroid.Service.ServiceMethod;
 
 /*
@@ -31,6 +32,8 @@ public class MainActivity extends ActionBarActivity {
 	private static final int MSERVICE = 1;
 	private static final int MBROADCASTRECEIVER = 2;
 	private static final int MCONTENTPROVIDER = 3;
+	private static final int MLAYOUT = 4;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,6 +62,10 @@ public class MainActivity extends ActionBarActivity {
 				case MCONTENTPROVIDER:
 					startActivity(new Intent(MainActivity.this,
 							ContentProviderMethods.class));
+					break;
+				case MLAYOUT:
+					startActivity(new Intent(MainActivity.this,
+							LayoutMethods.class));
 					break;
 				default:
 					break;
