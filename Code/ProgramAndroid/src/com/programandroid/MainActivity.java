@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.programandroid.Activity.ActivityMethods;
 import com.programandroid.BroadcastReceiver.BroadcastMethods;
 import com.programandroid.ContentProvider.ContentProviderMethods;
+import com.programandroid.Dialog.DiaLogMethods;
 import com.programandroid.Layout.LayoutMethods;
 import com.programandroid.Service.ServiceMethod;
 
@@ -33,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
 	private static final int MBROADCASTRECEIVER = 2;
 	private static final int MCONTENTPROVIDER = 3;
 	private static final int MLAYOUT = 4;
+	private static final int MDIALOG = 5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,11 @@ public class MainActivity extends ActionBarActivity {
 					startActivity(new Intent(MainActivity.this,
 							LayoutMethods.class));
 					break;
+				case MDIALOG:
+					startActivity(new Intent(MainActivity.this,
+							DiaLogMethods.class));
+					break;
+
 				default:
 					break;
 				}

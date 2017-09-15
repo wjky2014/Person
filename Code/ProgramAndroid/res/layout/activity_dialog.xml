@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SimpleDialog"
+        android:text="简单对话框" />
+
+    <Button
+        android:id="@+id/btn_dialog_multic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MultiChoiceDialog"
+        android:text="多选按钮对话框" />
+
+    <Button
+        android:id="@+id/btn_dialog_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SingleChoiceDialog"
+        android:text="单选按钮对话框" />
+
+    <Button
+        android:id="@+id/btn_dialog_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ListItemDialog"
+        android:text="列表对话框" />
+
+    <Button
+        android:id="@+id/btn_dialog_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="HorProgressDialog"
+        android:text="水平进度条对话框" />
+
+    <Button
+        android:id="@+id/btn_dialog_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SpinerProgressDialog"
+        android:text="圆形进度条对话框" />
+
+    <Button
+        android:id="@+id/btn_custom_dialog_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CustomImgTvDialog"
+        android:text="自定义图片对话框" />
+
+    <Button
+        android:id="@+id/btn_custom_dialog_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CustomEditTextDialog"
+        android:text="自定义EditText对话框" />
+
+    <Button
+        android:id="@+id/btn_custom_dialog_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CustomStyleDialog"
+        android:text="自定义样式对话框" />
+
+    <Button
+        android:id="@+id/btn_custom_dialog_style_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CustomStyleProgressDialog"
+        android:text="自定义圆形进度条样式对话框" />
+<Button
+        android:id="@+id/btn_dialogfragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CustomFragmentDialog"
+        android:text="通过 继承 DialogFragment创建对话框" />
+</LinearLayout>

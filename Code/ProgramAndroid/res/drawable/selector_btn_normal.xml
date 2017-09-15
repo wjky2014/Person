@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:drawable="@drawable/grey_btn_clicked" /> <!--按下去的背景颜色显示效果 -->
+    <item android:drawable="@drawable/grey_btn_normal" /> <!-- 没有任何状态下的背景颜色 -->
+</selector>
